@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clicker Cat Cafe</title>
+    <link rel="icon" type="image/x-icon" href="images_folder/icon.ico">
+    <link rel="stylesheet" href="overlays.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bevan:ital@0;1&family=Playwrite+US+Modern:wght@100..400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <br>
+    <h1> 🐾 Clicker Cat Cafe 🐾 </h1>
+    <audio id="bgm" src="audio_folder/backTrack.mp4" type="audio/mp4"></audio>
+    <audio id="meow" src="audio_folder/cat-meow-loud-225307.mp3" type="audio/mp3"></audio>
+    <h3>🐾 Meows: <span id="score">5</span> 🐾</h3>  
+    <h2 style = "text-align: left; padding-left: 1%">Menu:  🐾</h2> 
+    <div id="store-container" >
+        <!-- Add store for each widget type -->
+        <!--   name: Name of item -->
+        <!--   cost: Cost to buy widget -->
+        <!--   reap: Amount widget earns -->
+        <!--   cooldown: Time before next harvest -->
+        <!--   auto: "true" if store runs automatically -->
+        <!--   text: Text to appear on widget (optional) -->
+        <!--   textstyle: Style to apply to text -->
+        <!--   src: Path to image (optional) -->
+        <!--   imgstyle: Style to apply to image (optional) -->
+
+        <div class="store" count = "0" name="Cat" cost="5" baseReap = "2" reap="2" cooldown="0.5"
+        src="images_folder/basic-cat-removebg-preview.png"></div>
+
+        <div class="store" count = "0" name="Pile of Cats" cost="15" baseReap = "10" reap="10" cooldown="2.0" auto="false"
+        src="images_folder/cat-stack-01-removebg-preview.png"></div>
+
+        <div class="store" count = "0" name="Stack of Cats" cost="150" baseReap = "50" reap="50" cooldown="10.0" auto="true"
+        src="images_folder/cat-stack-02-removebg-preview.png" ></div>
+
+        <div class="store" count = "0" name="Boxed Cat" cost="500" baseReap = "315" reap="315" cooldown="20.0" auto="true"
+        src="images_folder/box-cat-removebg-preview.png"></div>
+
+        <div class="store" count = "0" name="Banana Cat" cost="1000" baseReap = "500" reap="500" cooldown="35" auto="true"
+        src="images_folder/banana-cat-removebg-preview.png" ></div>
+        
+    </div>
+    <div id="widget-container"></div>
+    
+    <script src="./game.js"></script>
+    <script src="./load.js"></script>
+</body>
+</html>
